@@ -1,14 +1,12 @@
-import 'package:dengugo/Core/AppRoutes.dart';
+import 'package:dengugo/Core/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'Questions/firstquestion.dart';
-import 'Questions/firstquestion.dart';
-
 class SplashScreen extends StatefulWidget {
-  SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -29,7 +27,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: AnimatedContainer(
           height: width,
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           curve: Curves.bounceOut,
           child: Hero(tag: 'app-logo',
               child: Image.asset("assets/logo.png")),
@@ -39,11 +37,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void nextScreen() async{
-    await Future.delayed(Duration(microseconds: 10));
+    await Future.delayed(const Duration(microseconds: 10));
     setState(() {
       width = Get.width - 40;
     });
-    await Future.delayed(Duration(milliseconds: 2000));
+    await Future.delayed(const Duration(milliseconds: 2000));
     Get.offAndToNamed(AppRoutes.MAINSCREEN);
   }
 }

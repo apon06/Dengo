@@ -1,14 +1,13 @@
-import 'package:dengugo/Core/AppRoutes.dart';
+import 'package:dengugo/Core/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'Core/AppRoutes.dart';
 void main()
 {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
